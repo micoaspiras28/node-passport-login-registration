@@ -1,0 +1,27 @@
+<% if(typeof errors!= 'undefined') {%>  
+    <% errors.forEach(function (error) { %>
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 class="alert-heading">Warning!</h4>
+            <p class="mb-0"><%= error.msg %></p>
+          </div>
+       
+    <% }); %>
+<% } %>
+
+<% if(success_msg != '') {%>  
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 class="alert-heading">Success!</h4>
+            <p class="mb-0"><%= success_msg %></p>
+          </div>
+<% } %>
+
+<% if(error_msg != '') {%>  
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 class="alert-heading">Warning!</h4>
+            <p class="mb-0"><%= error_msg %></p>
+          </div>
+<% } %>
+
